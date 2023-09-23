@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  /* default */
+  border: 0rem solid black;
+  margin: 0rem;
+  padding: .25rem;
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+  font-weight: normal;
+  line-height: 2;
+  color: black;
+  text-align: center;
+}
+
+:root {
+  --main-color: rgb(92, 138, 223);
+  --secondary-color: rgb(151, 178, 227);
+}
+
+/* Basic Fonts */
+h1 {
+  font-weight: 900;
+  font-size: 1.7rem;
+  /*padding: .5rem;*/
+}
+
+h2 {
+  font-weight: 450;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-weight: 450;
+  font-size: 1.1rem;
+  padding: .25rem;
+}
+
+h4, li {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+h4{
+  padding: 0rem 2rem 1rem 2rem;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Blockquote seems useless but idk */
+blockquote {
+  margin: 2rem 10%;
+  font-size: 1.1rem;
+  font-weight: 450;
+}
+
+/* Sections of text */
+header {
+  color: black;
+  background-color: var(--main-color);
+}
+
+main {
+  margin: 1rem auto;
+  max-width: 55rem;
+}
+
+footer,
+address {
+  background-color: var(--secondary-color);
+
+}
+
+/* maybe remove the address, idc about accessibility nobody uses this site */
+address {
+  padding: 0rem;
+  margin: 0rem;
+}
+
+/* Flexbot Container */
+.row {
+  display: flex;
+  padding: 0rem;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+/* For both container and text and footer*/
+.nav,
+.footer {
+  /*From column class*/
+  padding: 0rem;
+  flex-basis: 100%;
+
+  text-align: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: black;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.nav:hover {
+  background-color: var(--main-color);
+}
+
+/*Overhaul Vid*/
+img,
+iframe,
+.vid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: .15rem solid gray;
+}
+
+.right {
+  float: none;
+  width: 75%;
+  margin: .4rem auto 1rem auto;
+  padding: 0px;
+}
+
+.left {
+  float: none;
+  width: 75%;
+  margin: .4rem auto 1rem auto;
+  padding: 0px;
+}
+
+/* Find alternative*/
+.italics {
+  font-style: italic;
+}
+
+
+
+
+
+/* For Larger Than Phone */
+@media screen and (min-width: 600px) {
+  main {
+    margin: 1rem auto;
+  }
+
+  .nav,
+  .footer {
+    flex: 1;
+  }
+
+  .left,
+  .right {
+    width: 35%;
+    min-width: 17.5rem;
+    margin: .4rem 2rem 1rem 2rem;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  ul {
+    columns: 2;
+  }
+  
+  /*
+  .s2 {
+    flex: 2;
+  }
+
+  .s3 {
+    flex: 3;
+  }
+
+  .s4 {
+    flex: 4;
+  }
+  */
+}
